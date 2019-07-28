@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+
+server:
+  port: 8090
+
+spring:
+  application:
+    name: eureka-ribbon
+
+
+eureka-server:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
